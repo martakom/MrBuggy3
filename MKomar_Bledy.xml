@@ -154,7 +154,7 @@
 <Cell ><Data ss:Type="String">MrBuggy 3</Data></Cell>
 <Cell ><Data ss:Type="String">publiczny</Data></Cell>
 <Cell ><Data ss:Type="String">2019-10-20</Data></Cell>
-<Cell ><Data ss:Type="String">Aplikacja błędni interpretuje bezczynność.</Data></Cell>
+<Cell ><Data ss:Type="String">Aplikacja błędnie interpretuje bezczynność.</Data></Cell>
 <Cell ><Data ss:Type="String">przypisany</Data></Cell>
 <Cell ><Data ss:Type="String">otwarty</Data></Cell>
 <Cell ><Data ss:Type="String"></Data></Cell>
