@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="2906" name="szkolenie 19.10" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="2907" name="Weryfikacja obligatoryjności pól">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[587]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Sprawdzenie, czy obligatoryjność p&oacute;l w aplikacji działa poprawnie.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Uzupełnij wszystkie wymagane pola za wyjątkiem pola Nazwa użytkownika, a następnie naciśnij przycisk Zarejestruj użytkownika.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawił się komunikat &quot;{pole nazwa uzytkownika nie może&nbsp;być puste.&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Uzupełnij wszystkie wymagane pola za wyjątkiem pola &quot;Hasło&quot; i naciśnij przycisk &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawił się komunikat &quot;Pole [hasło] nie może być puste&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Uzupełnij wszystkie wymagane pola za wyjątkiem pola &quot;Imię&quot; i naciśnij przycisk &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawił się komunikat &quot;Pole [imię] nie może być puste.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Uzupełnij wszystkie wymagane pola za wyjątkiem pola &quot;Nazwisko&quot; i naciśnij przycisk &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawił się komunikat &quot;Pole [nazwisko] nie może być puste&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Uzupełnij wszystkie wymagane pola i naciśnij przycisk &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Użytkownik został zarejestrowany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2914" name="Walidacja pola &quot;Nazwa użytkownika&quot;">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[588]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zwalidowanie pola &quot;Nazwa użytkownika&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Nazwa użytkownika&quot; wpisz nazwę z wykorzystaniem znak&oacute;w diakrytycznych, i uzupełnij wszystkie wymagane pola. Następnie naciśnij &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawia się komunikat &quot;Pole [nazwa użytkownika] nie może zawierać znak&oacute;w diakrytycznych&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Nazwa użytkownika&quot; wpisz nazwę składającą się z 5 liter i uzupełnijwszystkie wymagane pola. Następnie naciśnij &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawia się komunikat &quot;Pole [nazwa użtkownika] musi zawierać minimum 6 znak&oacute;w&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Nazwa użytkownika&quot; wpisz nazwę z wykorzystaniem dużych liter, cyfr, małych liter, znak&oacute;w &quot;_&quot; i &quot;-&quot; i uzupełnijwszystkie wymagane pola. Następnie naciśnij &quot;Zarejestruj użytkownika&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Użytkownik został zarejestrowany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2919" name="Weryfikacja przycisku &quot;Dodaj do koszyka&quot;">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[589]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Sprawdzenie poprawności działania przycisku &quot;Dodaj do koszyka&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Wybierz dowolny produkt i kliknij przycisk &quot;Dodaj do koszyka&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Produkt został dodany do koszyka.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Kliknij przycisk &quot;Dodaj do koszyka&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Przycisk nie działa.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2923" name="Weryfikacja poprawności nr rachunku odbiorcy.">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[590]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności nr rachunku odbiorcy.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Muszą być dostępne środki na koncie.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Wpisz w pole &quot;Nr rachunku odbiorcy&quot; poprawny nr rachunku,&nbsp;uzupełnij wszystkie wymagane pola i kliknij przycisk &quot;OK&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Wszystkie pola są poprawne, możemhy potwierdzić przelew.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Wpisz w pole &quot;Nr rachunku odbiorcy&quot; niepoprawny nr rachunku, uzupełnij wszystkie wymagane pola i kliknij przycisk &quot;OK&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawia się komunikat &quot;Nr rachunku odbiorcy jest niepoprawny&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2928" name="Weryfikacja przycisku &quot;OK&quot;">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[591]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania przycisku &quot;OK&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Wpisz wszystkie wymagane pola i kliknij przycisk &quot;OK&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pola zostały uzupełnione poprawnie, możemy wykonać przelew.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2931" name="Weryfikacja przycisku &quot;Konwertuj&quot;">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[592]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania przycisku &quot;Konwertuj&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Liczba 32-bitowa&quot; wpisz dowolną wartość i kliknij przycisk &quot;Konwertuj&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Liczba zostanie poprawnie przekonwertowana na wartość HEX.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2934" name="Weryfikacja przycisku &quot;Start&quot;">
+	<node_order><![CDATA[1006]]></node_order>
+	<externalid><![CDATA[593]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania przycisku &quot;Start&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Kliknij przycisk &quot;Start&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Czas płynie.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Kliknij przycisk &quot;Start&quot;, następnie kliknij &quot;Stop&quot; i ponownie kliknij &quot;Start&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Czas ponownie płynie.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Kliknij przycisk &quot;Start&quot;, następnie kliknij &quot;Resetuj&quot; i ponownie kliknij &quot;Start&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Czas zaczął ponownie płynąć.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2939" name="Weryfikacja bramki logicznej AND">
+	<node_order><![CDATA[1007]]></node_order>
+	<externalid><![CDATA[594]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania bramki logicznej AND.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Wejście 1&quot; i &quot;Wejście 2&quot; wpisz liczbę 1 i kliknij przycisk &quot;Oblicz&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Bramka zwr&oacute;ciła wynik 1.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Wejście 1&quot; i &quot;Wejście 2&quot; wpisz kombinację 0 i 1 i kliknij przycisk &quot;Oblicz&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Bramka zwr&oacute;ciła wynik 0.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>W pole &quot;Wejście 1&quot; i &quot;Wejście 2&quot; wpisz dowolną liczbę, poza 0 i 1 i kliknij przycisk &quot;Oblicz&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Aplikacja nie przyjmuje innych wartości, poza 0 i 1.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2944" name="Weryfikacja poprawności zegara">
+	<node_order><![CDATA[1008]]></node_order>
+	<externalid><![CDATA[595]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania zegara</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>W formacie zegara wpisz dowolną, poprawną godzinę.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Zegar ustawił poprawną godzinę.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>W formacie zegara wpisz dowolną, niepoprawną godzinę.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Wyświetla się komunikat błędu.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2948" name="Poprawność wyliczenia wartości brutto">
+	<node_order><![CDATA[1009]]></node_order>
+	<externalid><![CDATA[596]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności wyliczenia wartości brutto.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Zostały dodane produkty.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>2.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Sprawdzenie, czy wyliczona wartość brutto jest poprawna.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Wyliczona wartość brutto jest poprawna.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2951" name="Walidacja pól w formularzu">
+	<node_order><![CDATA[1010]]></node_order>
+	<externalid><![CDATA[597]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zwalidowanie p&oacute;l w formularzu</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>10.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>W polu &quot;Nazwa&quot; wpisz nazwę i kliknij &quot;Dodaj produkt&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Wyświetla się komunikat &quot;Pole [cena netto] nie może być puste&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>W polu &quot;Cena netto&quot; wpisz cenę i kliknij &quot;Dodaj produkt&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Wyświetla się komunikat &quot;Pole [Stawka VAT] nie może być puste&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Wypełnij wszystkie wymagane pola i kliknij &quot;Dodaj produkt&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Produkt został dodany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2956" name="Weryfikacja poprawności przycisku &quot;Dodaj produkt&quot;">
+	<node_order><![CDATA[1011]]></node_order>
+	<externalid><![CDATA[598]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Sprawdzenie poprawności przycisku &quot;Dodaj produkt&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Poprawne wypełnienie wszystkich wymaganych p&oacute;l.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>1.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Kliknij przycisk &quot;Dodaj produkt&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Produkt został dodany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2959" name="Weryfikacja testu online">
+	<node_order><![CDATA[1012]]></node_order>
+	<externalid><![CDATA[599]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Sprawdzenie poprawności testu online.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>15.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>W pytaniach zaznacz każdą odpowiedź po kolei.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Można zaznaczyć dowolną odpowiedź.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Sprawdź przycisk &quot;Następny&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Przeszliśmy do następnego pytania.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Sprawdź przycisk &quot;Poprzedni&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Przeszliśmy do poprzedniego pytania.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Sprawdź przycisk &quot;Koniec&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Zakończyliśmy test. Wyświetla się wynik testu.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2965" name="Weryfikacja poprawności wczytywanych danych">
+	<node_order><![CDATA[1013]]></node_order>
+	<externalid><![CDATA[600]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Sprawdzenie poprawności wczytywanych danych.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Przygotowany plik z danymi.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>30.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Wczytaj plik z danymi</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Plik z danymi został wczytany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Sprawdź zgodność danych w kolumnach z tymi, kt&oacute;re zostały zapisane w pliku.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Dane są zgodne z tymi, kt&oacute;re zostały zapisane w pliku.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2969" name="Weryfikacja poprawności przycisku &quot;Generuj&quot;">
+	<node_order><![CDATA[1014]]></node_order>
+	<externalid><![CDATA[601]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania przycisku &quot;Generuj&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Wczytane wszystkie wymagane pliki.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>2.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Kliknij przycisk &quot;Generuj&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Plik został wygenerowany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2971" name="Weryfikacja poprawności przycisku &quot;Wyczyść&quot;">
+	<node_order><![CDATA[1015]]></node_order>
+	<externalid><![CDATA[602]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania przycisku &quot;Wyczyść&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Wczytane wszystkie wymagane pliki.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>1.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Po wczytaniu wszystkich wymaganych plik&oacute;w, kliknij przycisk &quot;Wyczyść&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pliki zostały usunięte.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2975" name="Weryfikacja przycisku &quot;Usuń&quot;.">
+	<node_order><![CDATA[1016]]></node_order>
+	<externalid><![CDATA[603]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności działania przycisku &quot;Usuń&quot;.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>Są dodane dowolne produkty do koszyka.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>2.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Zaznacz dowolny produkt i kliknij &quot;Usuń&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Produkt został usunięty.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2978" name="Weryfikacja zmiany adresu email.">
+	<node_order><![CDATA[1017]]></node_order>
+	<externalid><![CDATA[604]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zweryfikowanie poprawności zmiany adresu email.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Uzupełnij pole &quot;Aktualny adres email&quot; i &quot;Nowy adres email&quot; poprawnymi wartościami i kliknij &quot;Zmień&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Pojawił się link zmiany adresu email.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Potwierdź zmianę adresu email klikając w link.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Adres email został potwierdzony.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Przywr&oacute;ć poprzedni adres email.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Poprzedni adres email został przywr&oacute;cony.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2983" name="Walidacja funkcji tworzenia listy">
+	<node_order><![CDATA[1018]]></node_order>
+	<externalid><![CDATA[605]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Zwalidowanie funkcji tworzenia listy</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration>5.00</estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Wypełnij wszystkie wymagane pola poprawnymi danymi i kliknij &quot;Dodaj produkt&quot;.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Produkt został dodany.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Zweryfikuj dane dodanego produktu z wyświetlonymi na liście.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Dane na liście są poprawne.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite>
